@@ -189,6 +189,31 @@ public class App {
         return output.toString();
     }
 
+    /*
+    Task 6
+    Check Digit
+     */
+    public static int checkDigit(int[] code)
+    {
+        int sum = 0;
+
+        // Gewichtung berechnen
+        for (int i = 0; i < code.length; i++) {
+            sum += code[i] * (i+2);
+        }
+
+        int mod = sum % 11;
+
+        int checkDigit = 11 - mod;
+
+        if(checkDigit == 11)
+            return 5;
+
+        if (checkDigit == 10)
+            return 0;
+
+        return checkDigit;
+    }
 
     //region Private methods Task 1
     private static String generateBeginMonthWhiteSpace (int monthBeginDay)

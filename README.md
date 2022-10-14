@@ -15,4 +15,4 @@ Good luck :four_leaf_clover:
 - :white_check_mark: Task 3
 - :white_check_mark: Task 4
 - :white_check_mark: Task 5
-- [ ] Task 6
+- :white_check_mark: Task 6
