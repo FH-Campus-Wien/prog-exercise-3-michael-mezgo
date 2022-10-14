@@ -12,7 +12,7 @@ Please find a task description in the seperate handout on the moodle plattform o
 Good luck :four_leaf_clover:
 - :white_check_mark: Task 1
 - :white_check_mark: Task 2
-- [ ] Task 3
+- :white_check_mark: Task 3
 - [ ] Task 4
 - [ ] Task 5
 - [ ] Task 6

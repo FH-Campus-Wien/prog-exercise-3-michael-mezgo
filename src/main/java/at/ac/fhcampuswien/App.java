@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -17,12 +18,19 @@ public class App {
         for ( long l: lcgResult ) {
             System.out.println(l);
         }
+
+        System.out.println("Task 3:");
+        guessingGame(randomNumberBetweenOneAndHundred());
         // test your method implementations here
         // make method calls
         // print their results
         // etc.
     }
 
+    /*
+    Task 1
+    One-Month Calendar
+     */
     public static void oneMonthCalendar(int daysInMonth, int monthBeginDay)
     {
         int currentDay = 1;
@@ -40,6 +48,10 @@ public class App {
         while (currentDay <= daysInMonth);
     }
 
+    /*
+    Task 2
+    Pseudo Random Numbers
+     */
     public static long[] lcg (long seed)
     {
         final long m = (long) Math.pow(2, 31);
@@ -57,6 +69,46 @@ public class App {
         }
 
         return results;
+    }
+
+    /*
+    Task 3
+    Guessing Game
+     */
+    public static void guessingGame(int numberToGuess)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int userInput;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Guess number " + i + ": ");
+            userInput = scanner.nextInt();
+
+            if (i == 10 && userInput != numberToGuess)
+            {
+                System.out.println("You lost! Have you ever heard of divide & conquer?");
+                return;
+            }
+
+            if (userInput > numberToGuess)
+            {
+                System.out.println("The number AI picked is lower than your guess.");
+            }
+            else if (userInput < numberToGuess)
+            {
+                System.out.println("The number AI picked is higher than your guess.");
+            }
+            else
+            {
+                System.out.println("You won wisenheimer!");
+                return;
+            }
+        }
+    }
+
+    public static int randomNumberBetweenOneAndHundred ()
+    {
+        /* rnd.nextInt(101); // 0 - 100 */
+        return 1 + (int)(Math.random() * ((100 - 1) + 1));
     }
 
     //region Private methods Task 1
