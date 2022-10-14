@@ -75,6 +75,7 @@ public class App {
     Task 3
     Guessing Game
      */
+    //region Methods Task 2
     public static void guessingGame(int numberToGuess)
     {
         Scanner scanner = new Scanner(System.in);
@@ -107,9 +108,11 @@ public class App {
 
     public static int randomNumberBetweenOneAndHundred ()
     {
-        /* rnd.nextInt(101); // 0 - 100 */
-        return 1 + (int)(Math.random() * ((100 - 1) + 1));
+        Random rnd = new Random();
+        return rnd.nextInt(100) + 1;
+        //rnd.Next int erstellt Zahlen von 0 bis 99. Durch das +1 bekommen wir Zahlen von 1 bis 100.
     }
+    //endregion
 
     //region Private methods Task 1
     private static String generateBeginMonthWhiteSpace (int monthBeginDay)
