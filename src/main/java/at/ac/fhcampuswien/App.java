@@ -1,10 +1,22 @@
 package at.ac.fhcampuswien;
 
+import java.util.Scanner;
+
 public class App {
 
     // Implement all methods as public static
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Seed für Aufgabe 2: ");
+        long seed = scanner.nextLong();
+        long [] lcgResult = lcg(seed);
+
+        System.out.println("Ergebnisse:");
+        for ( long l: lcgResult ) {
+            System.out.println(l);
+        }
         // test your method implementations here
         // make method calls
         // print their results
@@ -28,7 +40,26 @@ public class App {
         while (currentDay <= daysInMonth);
     }
 
-    //region Private functions Task 1
+    public static long[] lcg (long seed)
+    {
+        final long m = (long) Math.pow(2, 31);
+        final int c = 12345;
+        final  int a = 1103515245;
+
+        long[] results = new long[10];
+
+        // Erste Berechnung mittels Startwert
+        results[0] = (a * seed + c) % m;
+
+        // Start bei 1, da 0 schon berechnet wurde
+        for (int i = 1; i < results.length; i++) {
+            results[i] = (a * results[i-1] + c) % m;
+        }
+
+        return results;
+    }
+
+    //region Private methods Task 1
     private static String generateBeginMonthWhiteSpace (int monthBeginDay)
     {
         StringBuilder output = new StringBuilder();
