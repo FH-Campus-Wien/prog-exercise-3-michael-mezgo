@@ -1,7 +1,7 @@
 # Exercise 3
 
 ## Classroom Status:
-[![GitHub Classroom Workflow](https://github.com/FH-Campus-Wien/prog-exercise-3-michael-mezgo/actions/workflows/classroom.yml/badge.svg)](https://github.com/FH-Campus-Wien/prog-exercise-3-michael-mezgo/actions/workflows/classroom.yml)
+[![GitHub Classroom Workflow](https://github.com/FH-Campus-Wien/prog-exercise-3-michael-mezgo/actions/workflows/classroom.yml/badge.svg?branch=master)](https://github.com/FH-Campus-Wien/prog-exercise-3-michael-mezgo/actions/workflows/classroom.yml)
 
 > Please add your solutions to App.java under src/main/java/...
 
