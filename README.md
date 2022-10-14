@@ -13,6 +13,6 @@ Good luck :four_leaf_clover:
 - :white_check_mark: Task 1
 - :white_check_mark: Task 2
 - :white_check_mark: Task 3
-- [ ] Task 4
+- :white_check_mark: Task 4
 - [ ] Task 5
 - [ ] Task 6

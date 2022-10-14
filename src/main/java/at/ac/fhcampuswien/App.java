@@ -114,6 +114,23 @@ public class App {
     }
     //endregion
 
+    /*
+    Task 4
+    Swap Arrays
+     */
+    public static boolean swapArrays(int[] array1, int[] array2)
+    {
+        if (array1.length != array2.length) //Arrays ungleich lang
+            return false;
+
+        for (int i = 0; i < array1.length; i++) {
+            int tmp = array1[i];
+            array1[i] = array2[i];
+            array2[i] = tmp;
+        }
+        return true;
+    }
+
     //region Private methods Task 1
     private static String generateBeginMonthWhiteSpace (int monthBeginDay)
     {
