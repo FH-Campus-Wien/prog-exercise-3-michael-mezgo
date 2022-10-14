@@ -131,6 +131,65 @@ public class App {
         return true;
     }
 
+    /*
+    Task 5
+    CamelCase
+     */
+    public static String camelCase(String input)
+    {
+        char[] inputArray = input.toCharArray();
+        StringBuilder output = new StringBuilder();
+
+        /*
+        ASCII: (https://www.torsten-horn.de/techdocs/ascii.htm)
+        A-Z = 65 - 90
+        a-z = 97 - 122
+
+        Unterschied Kleinbuchstabe - Großbuchstabe = 32
+
+        Leerzeichen = 32 (https://de.wikipedia.org/wiki/Leerzeichen)
+         */
+
+        // Erstes Zeichen
+        if (inputArray[0] < 65 || inputArray[0] > 90) {
+            if (inputArray[0] >= 97 && inputArray[0] <= 122)
+            {
+                char firstCharacter = (char)((int)inputArray[0]-32);
+                output.append(firstCharacter);
+            }
+        }
+
+        for (int i = 1; i < inputArray.length; i++) {
+            if (inputArray[i] >= 65 && inputArray[i] <= 90) // Grossbuchstaben
+            {
+                if(inputArray[i-1] != ' ') // Wenn vorheriger Buchstabe kein Leerzeichen war --> kein neues Wort
+                {
+                    char character = (char)((int)inputArray[i]+32); // Großbuchstabe wird zu Kleinbuchstabe
+                    output.append(character);
+                }
+                else // falls es ein neues Wort ist, wird der Großbuchstabe hinzugefügt
+                {
+                    output.append(inputArray[i]);
+                }
+            } else if (inputArray[i] >= 97 && inputArray[i] <= 122) // Kleinbuchstaben
+            {
+                if(inputArray[i-1] == ' ') // Wenn vorheriger Buchstabe ein Leerzeichen war --> neues Wort
+                {
+                    char character = (char)((int)inputArray[i]-32); // Kleinbuchstabe wird zu Großbuchstabe
+                    output.append(character);
+                }
+                else // falls kein neues Wort wird der Kleinbuchstabe den Output einfach so hinzugefügt
+                {
+                    output.append(inputArray[i]);
+                }
+            }
+            // alle anderen Zeichen werden ignoriert
+        }
+
+        return output.toString();
+    }
+
+
     //region Private methods Task 1
     private static String generateBeginMonthWhiteSpace (int monthBeginDay)
     {
