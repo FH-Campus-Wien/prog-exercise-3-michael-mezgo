@@ -147,7 +147,7 @@ public class App {
         for (int i = 1; i < inputArray.length; i++) {
             if (inputArray[i] >= 65 && inputArray[i] <= 90) // Grossbuchstaben
             {
-                if (inputArray[i - 1] != ' ') // Wenn vorheriger Buchstabe kein Leerzeichen war --> kein neues Wort
+                if (inputArray[i - 1] != ' ') // Wenn vorheriger Buchstabe kein Leerzeichen war → kein neues Wort
                 {
                     char character = (char) ((int) inputArray[i] + 32); // Großbuchstabe wird zu Kleinbuchstabe
                     output.append(character);
