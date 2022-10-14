@@ -42,8 +42,7 @@ public class App {
             System.out.println(generateWeekRow(currentDay, currentWeekLength, daysInMonth));
             currentDay += currentWeekLength;
             currentWeekLength = weekLength;
-        }
-        while (currentDay <= daysInMonth);
+        } while (currentDay <= daysInMonth);
     }
 
     /*
@@ -189,11 +188,9 @@ public class App {
 
         int checkDigit = 11 - mod;
 
-        if (checkDigit == 11)
-            return 5;
+        if (checkDigit == 11) return 5;
 
-        if (checkDigit == 10)
-            return 0;
+        if (checkDigit == 10) return 0;
 
         return checkDigit;
     }
