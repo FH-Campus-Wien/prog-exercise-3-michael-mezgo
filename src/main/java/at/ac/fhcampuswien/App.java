@@ -76,7 +76,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int userInput;
         for (int i = 1; i <= 10; i++) {
-            System.out.println("Guess number " + i + ": ");
+            System.out.print("Guess number " + i + ": ");
             userInput = scanner.nextInt();
 
             if (i == 10 && userInput != numberToGuess) {
